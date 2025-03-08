@@ -497,18 +497,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Core Development
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -519,34 +507,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#uart-protocol" class="md-nav__link">
-    <span class="md-ellipsis">
-      UART protocol
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -602,23 +562,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#uart-protocol" class="md-nav__link">
-    <span class="md-ellipsis">
-      UART protocol
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -653,73 +596,6 @@
 * <code>uart_*</code>: UART signal pads. These are the main interface between the core and the MCU.</p>
 <p>The <a href="https://github.com/hdl-util/hdmi">hdl-util/HDMI</a> interface should run in 720p mode. Please refer to nestang_top.v and the HDMI module author's documentation for how to use it.</p>
 <p>Please <a href="https://github.com/nand2mario/tangcore/issues">file an issue</a> if you met issues in building your core.</p>
-<h2 id="uart-protocol">UART protocol<a class="headerlink" href="#uart-protocol" title="Permanent link">&para;</a></h2>
-<p>The BL616 MCU acts as the master in UART communication. The protocol is handled in <code>iosys_bl616.v</code>. If you need to debug BL616-FPGA communication, then here's the protocol in use:</p>
-<table>
-<thead>
-<tr>
-<th>Command</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0x01</td>
-<td>get core ID (response: 0x11, followed by one byte of core ID). this is used to identify the core and check whether the core is ready</td>
-</tr>
-<tr>
-<td>0x02</td>
-<td>get core config string (response: 0x22, followed by null-terminated string)</td>
-</tr>
-<tr>
-<td>0x03 x[31:0]</td>
-<td>set core config status</td>
-</tr>
-<tr>
-<td>0x04 x[7:0] y[7:0]</td>
-<td>move overlay text cursor to (x, y)</td>
-</tr>
-<tr>
-<td>0x05 <string></td>
-<td>display null-terminated string from cursor</td>
-</tr>
-<tr>
-<td>0x06 loading_state[7:0]</td>
-<td>set loading state (rom_loading)</td>
-</tr>
-<tr>
-<td>0x07 len[23:0] <data></td>
-<td>load len (MSB-first) bytes of data to rom_do</td>
-</tr>
-<tr>
-<td>0x08 x[7:0]</td>
-<td>turn overlay on/off</td>
-</tr>
-</tbody>
-</table>
-<p>Messages from FPGA to BL616:</p>
-<table>
-<thead>
-<tr>
-<th>Response</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0x01 joy1[7:0] joy1[15:8] joy2[7:0] joy2[15:8]</td>
-<td>Every 20ms, send joypad state</td>
-</tr>
-<tr>
-<td>0x11 core_id[7:0]</td>
-<td>send core ID</td>
-</tr>
-<tr>
-<td>0x22 <string></td>
-<td>send null-terminated core config string</td>
-</tr>
-</tbody>
-</table>
 
 
 

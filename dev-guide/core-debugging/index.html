@@ -674,7 +674,7 @@
 <h2 id="gao-debugging">GAO debugging<a class="headerlink" href="#gao-debugging" title="Permanent link">&para;</a></h2>
 <p>Gowin FPGA debugging is mostly done through Gowin Analyzer Oscilloscope (GAO) over JTAG. JTAG is normally provided by the Sipeed BL616 firmware through USB. Now that TangCore has taken over the BL616, we need another way to provide JTAG functionality. We can do that with SOM connector on the FPGA module:</p>
 <p><img alt="" src="../som-debug.jpg" /></p>
-<p>Here we use the 8-pin debug wire (provided by Sipeed with their boards), and Sipeed RV Debugger to connect JTAG and UART (BL616_UART_TX to the RV debugger's RX pin).</p>
+<p>Here we use the 8-pin debug wire (provided by Sipeed with their boards), and Sipeed RV Debugger dongle (available on Sipeed store) to connect JTAG and UART (BL616_UART_TX to the RV debugger's RX pin).</p>
 <p>This way we can use Gowin Analyzer Oscilloscope to debug our gateware as normal. You can also put the debugging bitstream (<code>ao_0.bin</code>) on the USB drive and use TangCore menu to program it if you need to.</p>
 <h2 id="monitor-mcu-fpga-communcation">Monitor MCU-FPGA communcation<a class="headerlink" href="#monitor-mcu-fpga-communcation" title="Permanent link">&para;</a></h2>
 <p>The BL616 MCU acts as the master in UART communication. Communication happens in commands and responses. If you need to observe the communication to help debugging your core, you can do that with the script <code>python tangcore\firmware-bl616\scripts\liveuart.py &lt;com_port&gt;</code>. It will try to decode and dump the communication. For instance, core loading looks like this,</p>
@@ -715,8 +715,8 @@
 </span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>Version: Mar  7 2025&lt;get_core_id&gt;
 </span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>&lt;overlay_state:b&#39;\x01&#39;&gt;
 </span></code></pre></div>
-<p>So it is helpful in checking what is happening. </p>
-<p>You can also watch the traffic the other way (FPGA to MCU) over the other pin (BL616_UART_RX) with <code>python liveuart.py -f &lt;com_port&gt;</code>. It contains mostly joypad status updates and responses to other commands from the MCU.</p>
+<p>In addition to the text messages. Those in brackets (<code>&lt;get_core_id&gt;</code>) are commands sent to the FPGA, as listed in the protocol description next section. So this <code>printf</code>-style debugging is helpful in checking what is happening in realtime.</p>
+<p>You can also watch the traffic the other way (FPGA to MCU) on the other pin (BL616_UART_RX) with <code>python liveuart.py -f &lt;com_port&gt;</code>. It contains mostly joypad status updates and responses to other commands from the MCU.</p>
 <h2 id="uart-protocol">UART Protocol<a class="headerlink" href="#uart-protocol" title="Permanent link">&para;</a></h2>
 <p>The protocol is handled in <code>iosys_bl616.v</code>. If you need to debug BL616-FPGA communication, then here's the protocol in use:</p>
 <table>
