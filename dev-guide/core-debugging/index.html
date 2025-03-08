@@ -11,10 +11,8 @@
       
       
       
-        <link rel="prev" href="../installation/">
+        <link rel="prev" href="../core-development/">
       
-      
-        <link rel="next" href="../../dev-guide/architecture/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +20,7 @@
     
     
       
-        <title>Troubleshooting - TangCore Documentation</title>
+        <title>Core Debugging - TangCore Documentation</title>
       
     
     
@@ -76,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#troubleshooting" class="md-skip">
+        <a href="#debugging-your-core" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Troubleshooting
+              Core Debugging
             
           </span>
         </div>
@@ -290,12 +288,114 @@
       
   
   
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    User Guide
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            User Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/troubleshooting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
   
     
     
+      
+        
+      
+        
       
         
       
@@ -313,14 +413,14 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
-    User Guide
+    Developer Guide
     
   </span>
   
@@ -328,10 +428,10 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            User Guide
+            Developer Guide
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -342,11 +442,55 @@
   
   
     <li class="md-nav__item">
-      <a href="../installation/" class="md-nav__link">
+      <a href="../architecture/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Installation
+    Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../building/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../core-development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Core Development
     
   </span>
   
@@ -377,7 +521,7 @@
           
   
   <span class="md-ellipsis">
-    Troubleshooting
+    Core Debugging
     
   </span>
   
@@ -389,7 +533,7 @@
         
   
   <span class="md-ellipsis">
-    Troubleshooting
+    Core Debugging
     
   </span>
   
@@ -412,18 +556,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#theres-no-video-output" class="md-nav__link">
+  <a href="#gao-debugging" class="md-nav__link">
     <span class="md-ellipsis">
-      There's no video output
+      GAO debugging
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#i-cannot-navigate-the-menu" class="md-nav__link">
+  <a href="#monitor-mcu-fpga-communcation" class="md-nav__link">
     <span class="md-ellipsis">
-      I cannot navigate the menu
+      Monitor MCU-FPGA communcation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uart-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      UART Protocol
     </span>
   </a>
   
@@ -433,152 +586,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-        
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
-            
-  
-  <span class="md-ellipsis">
-    Developer Guide
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            Developer Guide
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dev-guide/architecture/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Architecture
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dev-guide/building/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Building
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dev-guide/core-development/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Core Development
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dev-guide/core-debugging/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Core Debugging
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -618,18 +625,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#theres-no-video-output" class="md-nav__link">
+  <a href="#gao-debugging" class="md-nav__link">
     <span class="md-ellipsis">
-      There's no video output
+      GAO debugging
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#i-cannot-navigate-the-menu" class="md-nav__link">
+  <a href="#monitor-mcu-fpga-communcation" class="md-nav__link">
     <span class="md-ellipsis">
-      I cannot navigate the menu
+      Monitor MCU-FPGA communcation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uart-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      UART Protocol
     </span>
   </a>
   
@@ -654,24 +670,120 @@
   
 
 
-<h1 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h1>
-<h2 id="theres-no-video-output">There's no video output<a class="headerlink" href="#theres-no-video-output" title="Permanent link">&para;</a></h2>
-<p>Check the following,</p>
-<ul>
-<li>Have you flashed the correct firmware for your board with Bouffalo Dev Cube? There's one .ini file for each board.</li>
-<li>Make sure USB drive contains <code>/cores/&lt;your_board&gt;/monitor.bin</code>. This is the bitstream that displays the menu.</li>
-<li>For Primer/Console, use USB-OTG dongle with power pass-through to connect USB and power.</li>
-<li>For Mega, either use OTG or the USB-A Host port on the board to connect USB drive. If USB-A is used, make sure the switch below is set to "DBG" instead of "FPGA".</li>
-<li>Do NOT connect the board to PC for power when you intend to run TangCore. Use a separate power supply. The Sipeed firmware enters JTAG/debug mode when PC is detected.</li>
-<li>For Tang Mega, don't forget to turn on power (long press POWER button on top)</li>
-</ul>
-<h2 id="i-cannot-navigate-the-menu">I cannot navigate the menu<a class="headerlink" href="#i-cannot-navigate-the-menu" title="Permanent link">&para;</a></h2>
-<p>Check controller connection. The current version supports dualshock2 controller only.</p>
-<ul>
-<li>For Mega, insert the DS2 pmod into the left pmod socket (pmod0).</li>
-<li>For Console, use the top pmod socket (pmod1).</li>
-<li>For Primer, use the middle pmod socket for DS2.</li>
-</ul>
+<h1 id="debugging-your-core">Debugging your core<a class="headerlink" href="#debugging-your-core" title="Permanent link">&para;</a></h1>
+<h2 id="gao-debugging">GAO debugging<a class="headerlink" href="#gao-debugging" title="Permanent link">&para;</a></h2>
+<p>Gowin FPGA debugging is mostly done through Gowin Analyzer Oscilloscope (GAO) over JTAG. JTAG is normally provided by the Sipeed BL616 firmware through USB. Now that TangCore has taken over the BL616, we need another way to provide JTAG functionality. We can do that with SOM connector on the FPGA module:</p>
+<p><img alt="" src="../som-debug.jpg" /></p>
+<p>Here we use the 8-pin debug wire (provided by Sipeed with their boards), and Sipeed RV Debugger to connect JTAG and UART (BL616_UART_TX to the RV debugger's RX pin).</p>
+<p>This way we can use Gowin Analyzer Oscilloscope to debug our gateware as normal. You can also put the debugging bitstream (<code>ao_0.bin</code>) on the USB drive and use TangCore menu to program it if you need to.</p>
+<h2 id="monitor-mcu-fpga-communcation">Monitor MCU-FPGA communcation<a class="headerlink" href="#monitor-mcu-fpga-communcation" title="Permanent link">&para;</a></h2>
+<p>The BL616 MCU acts as the master in UART communication. Communication happens in commands and responses. If you need to observe the communication to help debugging your core, you can do that with the script <code>python tangcore\firmware-bl616\scripts\liveuart.py &lt;com_port&gt;</code>. It will try to decode and dump the communication. For instance, core loading looks like this,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>fatfs: found /dev/sda
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>mount_volume: disk_initialize success
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>mount_volume: find_volume()=0
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Writing 2303277 bytes...
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>ID=0001481b, status=70006020
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Erase: pollFlag...
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Erase: OK
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Erase: disableCfg...
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>Erase: disableCfg done...
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Erase: status=0x30000020
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>Erasing again...
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>ID=0001481b, status=30000020
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>Erase: pollFlag...
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>Erase: OK
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>Erase: disableCfg...
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>Erase: disableCfg done...
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>Erase: status=0x30000020
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>Load SRAM
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>Usercode=0x0000, status=0x70006020
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>Time: total=2169121 us, jtag=0 us, flash=0 us, writetdi=75 us&lt;get_core_id&gt;
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>&lt;overlay_state:b&#39;\x01&#39;&gt;
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>       -== TangCore ==-
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>NES
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>SNES
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>Game Boy Advance
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>MegaDrive / Genesis
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>Cores
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>Options
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>Version: Mar  7 2025&lt;get_core_id&gt;
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>&lt;overlay_state:b&#39;\x01&#39;&gt;
+</span></code></pre></div>
+<p>So it is helpful in checking what is happening. </p>
+<p>You can also watch the traffic the other way (FPGA to MCU) over the other pin (BL616_UART_RX) with <code>python liveuart.py -f &lt;com_port&gt;</code>. It contains mostly joypad status updates and responses to other commands from the MCU.</p>
+<h2 id="uart-protocol">UART Protocol<a class="headerlink" href="#uart-protocol" title="Permanent link">&para;</a></h2>
+<p>The protocol is handled in <code>iosys_bl616.v</code>. If you need to debug BL616-FPGA communication, then here's the protocol in use:</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x01</td>
+<td>get core ID (response: 0x11, followed by one byte of core ID). this is used to identify the core and check whether the core is ready</td>
+</tr>
+<tr>
+<td>0x02</td>
+<td>get core config string (response: 0x22, followed by null-terminated string)</td>
+</tr>
+<tr>
+<td>0x03 x[31:0]</td>
+<td>set core config status</td>
+</tr>
+<tr>
+<td>0x04 x[7:0] y[7:0]</td>
+<td>move overlay text cursor to (x, y)</td>
+</tr>
+<tr>
+<td>0x05 <string></td>
+<td>display null-terminated string from cursor</td>
+</tr>
+<tr>
+<td>0x06 loading_state[7:0]</td>
+<td>set loading state (rom_loading)</td>
+</tr>
+<tr>
+<td>0x07 len[23:0] <data></td>
+<td>load len (MSB-first) bytes of data to rom_do</td>
+</tr>
+<tr>
+<td>0x08 x[7:0]</td>
+<td>turn overlay on/off</td>
+</tr>
+</tbody>
+</table>
+<p>Messages from FPGA to BL616:</p>
+<table>
+<thead>
+<tr>
+<th>Response</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x01 joy1[7:0] joy1[15:8] joy2[7:0] joy2[15:8]</td>
+<td>Every 20ms, send joypad state</td>
+</tr>
+<tr>
+<td>0x11 core_id[7:0]</td>
+<td>send core ID</td>
+</tr>
+<tr>
+<td>0x22 <string></td>
+<td>send null-terminated core config string</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -707,7 +819,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../installation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Installation">
+          <a href="../core-development/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Core Development">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -717,27 +829,11 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Installation
+                Core Development
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../../dev-guide/architecture/" class="md-footer__link md-footer__link--next" aria-label="Next: Architecture">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Architecture
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
         
       </nav>
     
