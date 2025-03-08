@@ -1,0 +1,87 @@
+/* Custom styles for TangCore docs */
+
+/* Gradient background for headers */
+.md-header {
+    background: linear-gradient(90deg, #2b1055 0%, #7597de 100%);
+}
+
+/* Custom styling for code blocks */
+.highlight {
+    background: rgba(43, 16, 85, 0.1);
+    border-radius: 4px;
+}
+
+/* Custom admonition for game-related notes */
+.md-typeset .admonition.game,
+.md-typeset details.game {
+    border-left-color: #7e57c2;
+}
+
+.md-typeset .game > .admonition-title,
+.md-typeset .game > summary {
+    background-color: rgba(126, 87, 194, 0.1);
+}
+
+.md-typeset .game > .admonition-title::before,
+.md-typeset .game > summary::before {
+    background-color: #7e57c2;
+}
+
+/* Animated hover effects for navigation */
+.md-nav__link:hover {
+    transform: translateX(2px);
+    transition: transform 0.2s ease;
+}
+
+/* Custom styling for tables */
+.md-typeset table:not([class]) {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.md-typeset table:not([class]) th {
+    background: rgba(43, 16, 85, 0.1);
+}
+
+/* Custom button styling */
+.md-typeset .md-button {
+    background: linear-gradient(90deg, #2b1055 0%, #7597de 100%);
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.md-typeset .md-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom styling for blockquotes */
+.md-typeset blockquote {
+    border-left: 4px solid #7e57c2;
+    background: rgba(126, 87, 194, 0.1);
+    border-radius: 4px;
+}
+
+/* Animated progress bar */
+.md-progress__bar {
+    background: linear-gradient(90deg, #2b1055 0%, #7597de 100%);
+    animation: progress-animation 2s linear infinite;
+}
+
+@keyframes progress-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Custom footer styling */
+.md-footer {
+    background: linear-gradient(90deg, #2b1055 0%, #7597de 100%);
+} 
