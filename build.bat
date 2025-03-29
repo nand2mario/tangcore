@@ -147,6 +147,7 @@ copy /y "nestang\impl\pnr\nestang_primer25k_ds2.bin" "build\cores\primer25k\nest
 copy /y "nestang\impl\pnr\nestang_mega60k_ds2.bin" "build\cores\mega60k\nestang.bin"
 copy /y "nestang\impl\pnr\nestang_mega138k_ds2.bin" "build\cores\mega138k\nestang.bin"
 copy /y "nestang\impl\pnr\nestang_console60k_ds2.bin" "build\cores\console60k\nestang.bin"
+copy /y "nestang\impl\pnr\nestang_console138k_ds2.bin" "build\cores\console138k\nestang.bin"
 if errorlevel 1 (
     echo Warning: Some NESTang files could not be copied
     set /a ERROR_COUNT+=1
@@ -157,6 +158,7 @@ copy /y "snestang\impl\pnr\snestang_primer25k_ds2.bin" "build\cores\primer25k\sn
 copy /y "snestang\impl\pnr\snestang_mega60k_ds2.bin" "build\cores\mega60k\snestang.bin"
 copy /y "snestang\impl\pnr\snestang_mega138k_ds2.bin" "build\cores\mega138k\snestang.bin"
 copy /y "snestang\impl\pnr\snestang_console60k_ds2.bin" "build\cores\console60k\snestang.bin"
+copy /y "snestang\impl\pnr\snestang_console138k_ds2.bin" "build\cores\console138k\snestang.bin"
 if errorlevel 1 (
     echo Warning: Some SNESTang files could not be copied
     set /a ERROR_COUNT+=1
@@ -166,6 +168,7 @@ echo Copy GBATang files
 copy /y "gbatang\impl\pnr\gbatang_mega60k.bin" "build\cores\mega60k\gbatang.bin"
 copy /y "gbatang\impl\pnr\gbatang_mega138k.bin" "build\cores\mega138k\gbatang.bin"
 copy /y "gbatang\impl\pnr\gbatang_console60k.bin" "build\cores\console60k\gbatang.bin"
+copy /y "gbatang\impl\pnr\gbatang_console138k.bin" "build\cores\console138k\gbatang.bin"
 if errorlevel 1 (
     echo Warning: Some GBATang files could not be copied
     set /a ERROR_COUNT+=1
@@ -175,6 +178,7 @@ echo Copy MDTang files
 copy /y "mdtang\impl\pnr\mdtang_mega60k.bin" "build\cores\mega60k\mdtang.bin"
 copy /y "mdtang\impl\pnr\mdtang_mega138k.bin" "build\cores\mega138k\mdtang.bin"
 copy /y "mdtang\impl\pnr\mdtang_console60k.bin" "build\cores\console60k\mdtang.bin"
+copy /y "mdtang\impl\pnr\mdtang_console138k.bin" "build\cores\console138k\mdtang.bin"
 if errorlevel 1 (
     echo Warning: Some MDTang files could not be copied
     set /a ERROR_COUNT+=1
@@ -182,6 +186,7 @@ if errorlevel 1 (
 
 echo Copy SMSTang files
 copy /y "smstang\impl\pnr\smstang_console60k.bin" "build\cores\console60k\smstang.bin"
+copy /y "smstang\impl\pnr\smstang_console138k.bin" "build\cores\console138k\smstang.bin"
 if errorlevel 1 (
     echo Warning: Some SMSTang files could not be copied
     set /a ERROR_COUNT+=1
@@ -192,6 +197,7 @@ copy /y "monitor\impl\pnr\monitor_primer25k.bin" "build\cores\primer25k\monitor.
 copy /y "monitor\impl\pnr\monitor_mega60k.bin" "build\cores\mega60k\monitor.bin"
 copy /y "monitor\impl\pnr\monitor_mega138k.bin" "build\cores\mega138k\monitor.bin"
 copy /y "monitor\impl\pnr\monitor_console60k.bin" "build\cores\console60k\monitor.bin"
+copy /y "monitor\impl\pnr\monitor_console138k.bin" "build\cores\console138k\monitor.bin"
 if errorlevel 1 (
     echo Warning: Some monitor files could not be copied
     set /a ERROR_COUNT+=1
