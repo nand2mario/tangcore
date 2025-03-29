@@ -20,3 +20,21 @@ The [hdl-util/HDMI](https://github.com/hdl-util/hdmi) interface should run in 72
 
 Please [file an issue](https://github.com/nand2mario/tangcore/issues) if you met issues in building your core.
 
+## Generating core logo
+
+Whenever a core is loaded on the FPGA, its logo is displayed at the bottom of the overlay page. When you create
+a new core, you probably want to make a new logo too. There is a script to help with that.
+
+```bash
+cd tangcore/monitor/scripts
+python genlogo.py
+```
+
+This will print out something like this, that you can put in `iosys/gowin_dpb_menu.v` to change the logo.
+
+```
+defparam dpb_inst_0.INIT_RAM_1C = 256'hE0077CF80E00000000E00F78780E00000007FDFE7079FE00000007FCFC7031F8
+defparam dpb_inst_0.INIT_RAM_1D = 256'h8039DC67F0E3FC77BBFC39DC6600E1FE7FF9FE3FDFE7F0E00F7CF80E3F8FE7F0
+defparam dpb_inst_0.INIT_RAM_1E = 256'hF0E1FE7039FE3F9C67F0E3FE703BFE39DC6630E380733B8039DC67F0E38077BB
+defparam dpb_inst_0.INIT_RAM_1F = 256'h00000C00000000000000003F8000000000000000398000000000000000381C66
+```

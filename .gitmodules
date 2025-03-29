@@ -16,3 +16,6 @@
 [submodule "monitor"]
 	path = monitor
 	url = https://github.com/nand2mario/monitorcore
+[submodule "smstang"]
+	path = smstang
+	url = git@github.com:nand2mario/smstang.git

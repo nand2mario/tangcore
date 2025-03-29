@@ -21,6 +21,8 @@ if /i "%1"=="firmware" (
     call :do_gbatang
 ) else if /i "%1"=="mdtang" (
     call :do_mdtang
+) else if /i "%1"=="smstang" (
+    call :do_smstang
 ) else if /i "%1"=="monitor" (
     call :do_monitor
 ) else if /i "%1"=="all" (
@@ -100,6 +102,17 @@ if errorlevel 1 (
 cd %BUILD_ROOT%
 exit /b
 
+:do_smstang
+echo Building SMSTang...
+cd smstang
+call buildall.bat
+if errorlevel 1 (
+    echo Error building SMSTang
+    set /a ERROR_COUNT+=1
+)
+cd %BUILD_ROOT%
+exit /b
+
 :do_monitor
 echo Building monitor...
 cd monitor
@@ -120,6 +133,7 @@ if not exist "build\cores\primer25k" mkdir build\cores\primer25k
 if not exist "build\cores\mega60k" mkdir build\cores\mega60k
 if not exist "build\cores\mega138k" mkdir build\cores\mega138k
 if not exist "build\cores\console60k" mkdir build\cores\console60k
+if not exist "build\cores\console138k" mkdir build\cores\console138k
 
 echo Copy firmware files
 xcopy /y /s "firmware-bl616\buildall\*" "build\firmware-bl616\" >nul 2>&1
@@ -163,6 +177,13 @@ copy /y "mdtang\impl\pnr\mdtang_mega138k.bin" "build\cores\mega138k\mdtang.bin"
 copy /y "mdtang\impl\pnr\mdtang_console60k.bin" "build\cores\console60k\mdtang.bin"
 if errorlevel 1 (
     echo Warning: Some MDTang files could not be copied
+    set /a ERROR_COUNT+=1
+)
+
+echo Copy SMSTang files
+copy /y "smstang\impl\pnr\smstang_console60k.bin" "build\cores\console60k\smstang.bin"
+if errorlevel 1 (
+    echo Warning: Some SMSTang files could not be copied
     set /a ERROR_COUNT+=1
 )
 
