@@ -34,6 +34,8 @@ TangCore is a comprehensive FPGA gaming distribution that brings classic gaming 
 - **[MDTang](https://github.com/nand2mario/mdtang/)** - Sega Genesis/Mega Drive
   - Accurate Genesis/Mega Drive emulation
 
+- **[SMSTang](https://github.com/nand2mario/smstang/)** - Sega Master System
+
 ## 💻 Supported Hardware
 
 | Board Model | Status | Notes |
