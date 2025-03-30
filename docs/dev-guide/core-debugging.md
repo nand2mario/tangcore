@@ -12,7 +12,11 @@ This way we can use Gowin Analyzer Oscilloscope to debug our gateware as normal.
 
 ## Monitor MCU-FPGA communcation
 
-The BL616 MCU acts as the master in UART communication. Communication happens in commands and responses. If you need to observe the communication to help debugging your core, you can do that with the script `python tangcore\firmware-bl616\scripts\liveuart.py <com_port>`. It will try to decode and dump the communication. For instance, core loading looks like this,
+The BL616 MCU acts as the master in UART communication. Communication happens in commands and responses. If you need to observe the communication to help debugging your core, you can do that with the script `python tangcore\firmware-bl616\scripts\liveuart.py <com_port>`. It will try to decode and dump the communication. There are two streams - BL616 to FPGA, and FPGA to BL616. So it would be better if you use a 2-UART USB-serial adapter, and connect the wires like this:
+
+![](tangcore_uart.drawio.svg)
+
+The TX pin carries the BL616-to-FPGA stream, and vice versa. For instance, core loading looks like this on the TX line,
 
 ```
 fatfs: found /dev/sda
@@ -53,7 +57,7 @@ Version: Mar  7 2025<get_core_id>
 <overlay_state:b'\x01'>
 ```
 
-In addition to the text messages. Those in brackets (`<get_core_id>`) are commands sent to the FPGA, as listed in the protocol description next section. So this `printf`-style debugging is helpful in checking what is happening in realtime.
+In addition to the text messages. Those in brackets (e.g. `<get_core_id>`) are commands sent to the FPGA, as listed in the protocol description next section. So this `printf`-style debugging is helpful in checking what is happening in realtime.
 
 You can also watch the traffic the other way (FPGA to MCU) on the other pin (BL616_UART_RX) with `python liveuart.py -f <com_port>`. It contains mostly joypad status updates and responses to other commands from the MCU.
 
