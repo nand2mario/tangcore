@@ -12,11 +12,11 @@ This way we can use Gowin Analyzer Oscilloscope to debug our gateware as normal.
 
 ## Monitor MCU-FPGA communcation
 
-The BL616 MCU acts as the master in UART communication. Communication happens in commands and responses. If you need to observe the communication to help debugging your core, you can do that with the script `python tangcore\firmware-bl616\scripts\liveuart.py <com_port>`. It will try to decode and dump the communication. There are two streams - BL616 to FPGA, and FPGA to BL616. So it would be better if you use a 2-UART USB-serial adapter, and connect the wires like this:
+The BL616 MCU acts as the master in UART communication. Communication happens in commands and responses. If you need to observe the communication to help debugging your core, you can do that with the script `firmware-bl616/scripts/liveuart.py`. It will try to decode and dump the communication. There are two streams - BL616 to FPGA, and FPGA to BL616. So it would be better if you use a 2-UART USB-serial adapter, and connect the wires like this:
 
 ![](tangcore_uart.drawio.svg)
 
-The TX pin carries the BL616-to-FPGA stream, and vice versa. For instance, core loading looks like this on the TX line,
+The TX pin carries the BL616-to-FPGA stream, and vice versa. For instance, core loading looks like this with `python tangcore\firmware-bl616\scripts\liveuart.py <com_port>` on the TX line,
 
 ```
 fatfs: found /dev/sda
