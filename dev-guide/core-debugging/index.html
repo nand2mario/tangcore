@@ -741,7 +741,7 @@
 </span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>Version: Mar  7 2025&lt;get_core_id&gt;
 </span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>&lt;overlay_state:b&#39;\x01&#39;&gt;
 </span></code></pre></div>
-<p>In addition to the text messages. Those in brackets (e.g. <code>&lt;get_core_id&gt;</code>) are commands sent to the FPGA, as listed in the protocol description next section. So this <code>printf</code>-style debugging is helpful in checking what is happening in realtime.</p>
+<p>In addition to the text messages. Those in brackets (e.g. <code>&lt;get_core_id&gt;</code>) are commands sent to the FPGA, as listed in the protocol description next section. So this <code>printf</code>-style debugging is helpful in checking what is happening in realtime. You can check the firmware source code (<code>firmware-bl616/main.c</code>) to pinpoint problems.</p>
 <p>You can also watch the traffic the other way (FPGA to MCU) on the other pin (BL616_UART_RX) with <code>python liveuart.py -f &lt;com_port&gt;</code>. It contains mostly joypad status updates and responses to other commands from the MCU.</p>
 <h2 id="uart-protocol">UART Protocol<a class="headerlink" href="#uart-protocol" title="Permanent link">&para;</a></h2>
 <p>The protocol is handled in <code>iosys_bl616.v</code>. If you need to debug BL616-FPGA communication, then here's the protocol in use:</p>
