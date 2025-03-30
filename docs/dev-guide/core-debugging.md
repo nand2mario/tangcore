@@ -57,7 +57,7 @@ Version: Mar  7 2025<get_core_id>
 <overlay_state:b'\x01'>
 ```
 
-In addition to the text messages. Those in brackets (e.g. `<get_core_id>`) are commands sent to the FPGA, as listed in the protocol description next section. So this `printf`-style debugging is helpful in checking what is happening in realtime.
+In addition to the text messages. Those in brackets (e.g. `<get_core_id>`) are commands sent to the FPGA, as listed in the protocol description next section. So this `printf`-style debugging is helpful in checking what is happening in realtime. You can check the firmware source code (`firmware-bl616/main.c`) to pinpoint problems.
 
 You can also watch the traffic the other way (FPGA to MCU) on the other pin (BL616_UART_RX) with `python liveuart.py -f <com_port>`. It contains mostly joypad status updates and responses to other commands from the MCU.
 
