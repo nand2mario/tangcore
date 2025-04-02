@@ -13,7 +13,7 @@
 ---
 
 ## 📦 Pre-Install Checklist
-- [ ] Bouffalo Lab Dev Cube v1.8.4+ ([Download](https://dev.bouffalolab.com/download))
+- [ ] Bouffalo Flash Cube v1.1 (in `tools/bflb_tools/bouffalo_flash_cube` of [Bouffalo SDK](https://github.com/bouffalolab/bouffalo_sdk))
 - [ ] USB 2.0 drive (FAT32/exFAT, ≤32GB recommended)
 - [ ] USB-C OTG adapter with **power pass-through**, needed for Tang Console and Tang Primer as these do not have USB Host ports.
 - [ ] Valid GBA BIOS (`gba_bios.bin` MD5: `81977335...`)
@@ -24,7 +24,7 @@
 ## 🔧 Firmware Installation
 
 1. Extract release package
-2. Launch Dev Cube → **Browse** → Select:
+2. Launch Flash Cube → **Browse** → Select:
    ```bash
    /firmware-bl616/flash_<board-model>.ini
    ```
