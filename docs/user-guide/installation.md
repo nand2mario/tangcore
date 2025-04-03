@@ -33,6 +33,8 @@
 3. Boot Mode Activation:
    - Hold **BOOT** button → Connect USB → Release after connection
 
+   ![Boot Button](boot_button.jpg)
+
 4. Flash Process:
    - Refresh COM ports → Select Port/SN → **Download**
    - Confirm success screen:
@@ -46,13 +48,16 @@
 
 ### USB drive content
 ```bash
-📁 USB_ROOT/
-├── 📁 cores/        # Core binaries from release
-├── 📁 nes/          # .nes files
+📁 /                
+├── 📁 cores/        # `cores` directory from release
+│    ├── 📁 console60k/
+│    └── 📁 console138k/
+├── 📁 nes/          # .nes rom files
 ├── 📁 snes/         # .smc/.sfc files
 ├── 📁 gba/
 │    └── 🗎 gba_bios.bin  # Mandatory BIOS
-└── 📁 genesis/      # .bin/.md files
+├── 📁 genesis/      # .bin/.md files
+└── 📁 sms/          # .sms files
 ```
 
 ### Hardware Assembly
