@@ -619,7 +619,12 @@
 
 
 <h1 id="game-controllers">Game Controllers<a class="headerlink" href="#game-controllers" title="Permanent link">&para;</a></h1>
-<p>TangCore supports several types of game controllers including Dualshock 2 (DS2), USB HID, and USB Xinput devices. Controller compatibility will continue to improve with future updates. Note: To use USB controllers, you'll need a USB hub with at least 3 ports - one for the USB drive and two for controllers.</p>
+<p>TangCore supports several types of game controllers including Dualshock 2 (DS2), USB HID, and USB Xinput devices. Controller compatibility will continue to improve with future updates. </p>
+<p>Instructions for USB controllers,</p>
+<ul>
+<li>To connect the SNES-style USB controllers sold by Sipeed with Tang Console, you can plug them into the bottom two USA-A ports of the board. These two ports are connected to the FPGA, and currently the FPGA only supports this model of USB gamepad directly.</li>
+<li><strong>For other USB controllers, you need a USB hub</strong> with at least 3 ports - one for the USB drive and two for controllers. Then you plug the hub into the bottom-left USB-C port of the board, i.e. connecting them to the BL616 MCU.</li>
+</ul>
 <p>Here are some test results for controllers.</p>
 <table>
 <thead>
@@ -642,12 +647,12 @@
 </tr>
 <tr>
 <td>8BitDo SN30 Pro Wired Controller</td>
-<td>✅ Fully working</td>
+<td>✅ Fully working (USB hub needed)</td>
 <td><img alt="" src="../gamepad_sn30pro.jpg" style="width:150px" /></td>
 </tr>
 <tr>
 <td>8BitDo Wireless USB Adapter</td>
-<td>✅ Fully working (XInput mode only)</td>
+<td>✅ Fully working (USB hub needed)</td>
 <td><img alt="" src="../gamepad_8bitdo_adapter.jpg" style="width:150px" /></td>
 </tr>
 </tbody>
