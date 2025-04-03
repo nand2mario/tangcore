@@ -13,7 +13,7 @@
 ---
 
 ## 📦 Pre-Install Checklist
-- [ ] Bouffalo Flash Cube v1.1 (in `tools/bflb_tools/bouffalo_flash_cube` of [Bouffalo SDK](https://github.com/bouffalolab/bouffalo_sdk))
+- [ ] Bouffalo Flash Cube v1.1 (in `tools/bflb_tools/bouffalo_flash_cube` of [Bouffalo SDK](https://github.com/bouffalolab/bouffalo_sdk), also a [local standalone version here](https://nand2mario.github.io/tangcore/user-guide/assets/bouffalo_flash_cube-1.1.zip))
 - [ ] USB 2.0 drive (FAT32/exFAT, ≤32GB recommended)
 - [ ] USB-C OTG adapter with **power pass-through**, needed for Tang Console and Tang Primer as these do not have USB Host ports.
 - [ ] Valid GBA BIOS (`gba_bios.bin` MD5: `81977335...`)
