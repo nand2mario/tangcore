@@ -1,21 +1,21 @@
 [submodule "firmware-bl616"]
 	path = firmware-bl616
-	url = https://github.com/nand2mario/firmware-bl616
+	url = ../firmware-bl616.git
 [submodule "nestang"]
 	path = nestang
-	url = https://github.com/nand2mario/nestang
+	url = ../nestang.git
 [submodule "snestang"]
 	path = snestang
-	url = https://github.com/nand2mario/snestang
+	url = ../snestang.git
 [submodule "gbatang"]
 	path = gbatang
-	url = https://github.com/nand2mario/gbatang
+	url = ../gbatang.git
 [submodule "mdtang"]
 	path = mdtang
-	url = https://github.com/nand2mario/mdtang
+	url = ../mdtang.git
 [submodule "monitor"]
 	path = monitor
-	url = https://github.com/nand2mario/monitorcore
+	url = ../monitorcore.git
 [submodule "smstang"]
 	path = smstang
-	url = git@github.com:nand2mario/smstang.git
+	url = ../smstang.git
