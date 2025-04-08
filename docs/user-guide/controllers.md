@@ -5,7 +5,7 @@ TangCore supports several types of game controllers including Dualshock 2 (DS2),
 Instructions for USB controllers,
 
 * To connect the SNES-style USB controllers sold by Sipeed with Tang Console, you can plug them into the bottom two USA-A ports of the board. These two ports are connected to the FPGA, and currently the FPGA only supports this model of USB gamepad directly.
-* **For other USB controllers, you need a USB hub** with at least 3 ports - one for the USB drive and two for controllers. Then you plug the hub into the bottom-left USB-C port of the board, i.e. connecting them to the BL616 MCU.
+* **For other USB controllers, you need a USB hub** with at least 3 ports - one for the USB drive and two for controllers. The hub also needs to support "power passthrough", so it provides power to the board. Here is [a list of working USB hubs](https://github.com/nand2mario/tangcore/wiki/Compatible-USB-Hubs). The hub should be plugged into the bottom-left USB-C port of the board, i.e. connecting to the BL616 MCU.
 
 Here are some test results for controllers.
 
