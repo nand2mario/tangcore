@@ -35,6 +35,8 @@
 
    ![Boot Button](boot_button.jpg)
 
+   - Note for Tang Primer 25K: the primer does not have a BOOT button. [Short these two pins](primer25k.jpg) and connect USB instead.
+
 4. Flash Process:
    - Refresh COM ports → Select Port/SN → **Download**
    - Confirm success screen:
