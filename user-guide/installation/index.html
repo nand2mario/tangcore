@@ -797,28 +797,22 @@
 <td>✔️ Great</td>
 </tr>
 <tr>
-<td>Tang Mega 60K</td>
-<td>60K LUT</td>
-<td>All cores</td>
-<td>✔️ Great</td>
-</tr>
-<tr>
-<td>Tang Mega 138K</td>
+<td>Tang Console 138K</td>
 <td>138K LUT</td>
 <td>All cores</td>
-<td>✔️ Great</td>
+<td>✔️ Experimental</td>
 </tr>
 <tr>
 <td>Tang Primer 25K</td>
 <td>25K LUT</td>
-<td>NESTang, SNESTang only</td>
-<td>⚠️ Limited</td>
+<td>NESTang, SNESTang</td>
+<td>✔️ Experimental (v0.7)</td>
 </tr>
 <tr>
 <td>Tang Nano 20K</td>
 <td>20K LUT</td>
 <td><em>Unsupported</em></td>
-<td>❌ Not working</td>
+<td>❌ Use standalone NESTang/SNESTang</td>
 </tr>
 </tbody>
 </table>
@@ -827,8 +821,8 @@
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Bouffalo Flash Cube v1.1 (in <code>tools/bflb_tools/bouffalo_flash_cube</code> of <a href="https://github.com/bouffalolab/bouffalo_sdk">Bouffalo SDK</a>, also a <a href="https://nand2mario.github.io/tangcore/user-guide/assets/bouffalo_flash_cube-1.1.zip">local standalone version here</a>)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> USB 2.0 drive (FAT32/exFAT, ≤32GB recommended)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> USB-C OTG adapter with <strong>power pass-through</strong>, needed for Tang Console and Tang Primer as these do not have USB Host ports.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Valid GBA BIOS (<code>gba_bios.bin</code> MD5: <code>81977335...</code>)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> USB-C OTG adapter with <strong>power pass-through</strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Valid GBA BIOS (<code>gba_bios.bin</code>)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Latest <a href="https://github.com/nand2mario/tangcore/releases">TangCore Release Package</a></li>
 </ul>
 <hr />
@@ -839,7 +833,7 @@
 <p>Launch Flash Cube → <strong>Browse</strong> → Select:
    <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>/firmware-bl616/flash_&lt;board-model&gt;.ini
 </span></code></pre></div>
-   <em>(e.g., <code>flash_tang_console_60k.ini</code>)</em></p>
+   <em>(e.g., <code>flash_console60k.ini</code>)</em></p>
 </li>
 <li>
 <p>Boot Mode Activation:</p>
@@ -849,7 +843,7 @@
 <p><img alt="Boot Button" src="../boot_button.jpg" /></p>
 <ul>
 <li>
-<p>Note for Tang Primer 25K: the primer does not have a BOOT button. <a href="../primer25k.jpg">Short these two pins</a> and connect USB instead.</p>
+<p>Note for Tang Primer 25K: the primer does not have a BOOT button. <a href="https://nand2mario.github.io/tangcore/user-guide/primer25k.jpg">Short these two pins</a> and connect USB instead.</p>
 </li>
 <li>
 <p>Flash Process:</p>
@@ -869,14 +863,14 @@
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>├──<span class="w"> </span>📁<span class="w"> </span>nes/<span class="w">          </span><span class="c1"># .nes rom files</span>
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>├──<span class="w"> </span>📁<span class="w"> </span>snes/<span class="w">         </span><span class="c1"># .smc/.sfc files</span>
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>├──<span class="w"> </span>📁<span class="w"> </span>gba/
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>│<span class="w">    </span>└──<span class="w"> </span>🗎<span class="w"> </span>gba_bios.bin<span class="w">  </span><span class="c1"># Mandatory BIOS</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>│<span class="w">    </span>└──<span class="w"> </span>🗎<span class="w"> </span>gba_bios.bin<span class="w">  </span><span class="c1"># GBA BIOS</span>
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>├──<span class="w"> </span>📁<span class="w"> </span>genesis/<span class="w">      </span><span class="c1"># .bin/.md files</span>
 </span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>└──<span class="w"> </span>📁<span class="w"> </span>sms/<span class="w">          </span><span class="c1"># .sms files</span>
 </span></code></pre></div>
 <h3 id="hardware-assembly">Hardware Assembly<a class="headerlink" href="#hardware-assembly" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Connect components as shown:<br />
-<img alt="" src="../tangcore-user.jpg" /></li>
+<li>Connect components as shown (DS2 controller setup shown):
+   <img alt="" src="../tangcore-user.jpg" /></li>
 </ol>
 <p><em>Left: OTG+USB | Right: DS2 PMOD+Wireless Receiver | Top: HDMI output</em></p>
 <ol>
