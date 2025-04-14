@@ -697,11 +697,11 @@
 <p>Please <a href="https://github.com/nand2mario/tangcore/issues">file an issue</a> if you met issues in building your core.</p>
 <h2 id="generating-core-logo">Generating core logo<a class="headerlink" href="#generating-core-logo" title="Permanent link">&para;</a></h2>
 <p>Whenever a core is loaded on the FPGA, its logo is displayed at the bottom of the overlay page. When you create
-a new core, you probably want to make a new logo too. There is a script to help with that.</p>
+a new core, you probably want to make a new logo too. There is a script <code>tangcore/monitor/scripts/genlogo.py</code> to help with that. Read the script and make adjustments to the logo you want generate. Then,</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">cd</span><span class="w"> </span>tangcore/monitor/scripts
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python<span class="w"> </span>genlogo.py
 </span></code></pre></div>
-<p>This will print out something like this, that you can put in <code>iosys/gowin_dpb_menu.v</code> to change the logo.</p>
+<p>This will generate a preview of the logo and print out something like this, that you can put in <code>iosys/gowin_dpb_menu.v</code> to change the logo.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>defparam dpb_inst_0.INIT_RAM_1C = 256&#39;hE0077CF80E00000000E00F78780E00000007FDFE7079FE00000007FCFC7031F8
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>defparam dpb_inst_0.INIT_RAM_1D = 256&#39;h8039DC67F0E3FC77BBFC39DC6600E1FE7FF9FE3FDFE7F0E00F7CF80E3F8FE7F0
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>defparam dpb_inst_0.INIT_RAM_1E = 256&#39;hF0E1FE7039FE3F9C67F0E3FE703BFE39DC6630E380733B8039DC67F0E38077BB
