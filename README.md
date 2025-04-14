@@ -41,9 +41,8 @@ TangCore is a comprehensive FPGA gaming distribution that brings classic gaming 
 | Board Model | Status | Notes |
 |------------|--------|-------|
 | [Tang Console 60K](https://sipeed.com/tangconsole) | ✅ Recommended | Best overall experience |
-| Tang Mega 60K | ✅ Fully supported | All cores available |
-| Tang Mega 138K | ✅ Fully supported | All cores available |
-| Tang Primer 25K | ⚠️ Limited | NES/SNES only |
+| Tang Console 138K | ✅ Experimental | Supported since April 2025 |
+| Tang Primer 25K | ✅ Experimental | NES/SNES only |
 
 <img src="doc/tangcore-boards.jpg" width=450> 
 
