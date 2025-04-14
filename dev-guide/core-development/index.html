@@ -685,12 +685,14 @@
 <li><code>src/iosys/textdisp.v</code>: 32x28 text mode display to show the overlay text</li>
 <li><code>src/iosys/uart_fixed.v</code>: the UART TX/RX modules</li>
 </ul>
-<p>The other older io system module is <code>iosys_picorv32.v</code>. It uses a risc-v softcore running inside the FPGA to act as the IO processor. New cores should use <code>iosys_bl616</code>, the newer module.</p>
-<p>If you open <code>iosys_bl616.v</code>, you will see that it provides a few useful pins,
-* <code>overlay*</code>: these are signals for the "on-screen display" (OSD). It outputs a 256x224 image. When <code>overlay==1</code> (controlled by the MCU), it will be shown on screen. Note that <code>overlay*</code> run in the <code>hclk</code> (HDMI clock) domain, the rest of the signals run in <code>clk</code> domain.
-* <code>joy*</code>: inputs to iosys. These joypad button states will be sent periodically to MCU to control the overlay menu.
-* <code>rom_*</code>: When MCU starts ROM loading through the UART interface, data is output through these pins to the actual core.
-* <code>uart_*</code>: UART signal pads. These are the main interface between the core and the MCU.</p>
+<p>The other older io system module is <code>iosys_picorv32.v</code>. It uses a risc-v softcore running inside the FPGA to act as the IO processor. New cores should use <code>iosys_bl616</code>.</p>
+<p>If you open <code>iosys_bl616.v</code>, you will see that it provides a few useful pins,</p>
+<ul>
+<li><code>overlay*</code>: these are signals for the "on-screen display" (OSD). It outputs a 256x224 image. When <code>overlay==1</code> (controlled by the MCU), it will be shown on screen. Note that <code>overlay*</code> run in the <code>hclk</code> (HDMI clock) domain, the rest of the signals run in <code>clk</code> domain.</li>
+<li><code>joy*</code>: inputs to iosys. These joypad button states will be sent periodically to MCU to control the overlay menu.</li>
+<li><code>rom_*</code>: When MCU starts ROM loading through the UART interface, data is output through these pins to the actual core.</li>
+<li><code>uart_*</code>: UART signal pads. These are the main interface between the core and the MCU.</li>
+</ul>
 <p>The <a href="https://github.com/hdl-util/hdmi">hdl-util/HDMI</a> interface should run in 720p mode. Please refer to nestang_top.v and the HDMI module author's documentation for how to use it.</p>
 <p>Please <a href="https://github.com/nand2mario/tangcore/issues">file an issue</a> if you met issues in building your core.</p>
 <h2 id="generating-core-logo">Generating core logo<a class="headerlink" href="#generating-core-logo" title="Permanent link">&para;</a></h2>

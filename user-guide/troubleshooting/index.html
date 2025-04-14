@@ -698,7 +698,7 @@
 <h2 id="theres-no-video-output">There's no video output<a class="headerlink" href="#theres-no-video-output" title="Permanent link">&para;</a></h2>
 <p>Check the following,</p>
 <ul>
-<li>Have you flashed the correct firmware for your board with Bouffalo Dev Cube? There's one .ini file for each board.</li>
+<li>Have you flashed the correct firmware for your board with Bouffalo Flash Cube? There's one .ini file for each board.</li>
 <li>Make sure USB drive contains <code>/cores/&lt;your_board&gt;/monitor.bin</code>. This is the bitstream that displays the menu.</li>
 <li>For Primer/Console, use USB-OTG dongle with power pass-through to connect USB and power.</li>
 <li>For Mega, either use OTG or the USB-A Host port on the board to connect USB drive. If USB-A is used, make sure the switch below is set to "DBG" instead of "FPGA".</li>
@@ -706,11 +706,16 @@
 <li>For Tang Mega, don't forget to turn on power (long press POWER button on top)</li>
 </ul>
 <h2 id="i-cannot-navigate-the-menu">I cannot navigate the menu<a class="headerlink" href="#i-cannot-navigate-the-menu" title="Permanent link">&para;</a></h2>
-<p>Check controller connection. The current version supports dualshock2 controller only.</p>
+<p>Check controller connection. Dualshock controller support is most stable:</p>
 <ul>
 <li>For Mega, insert the DS2 pmod into the left pmod socket (pmod0).</li>
 <li>For Console, use the top pmod socket (pmod1).</li>
 <li>For Primer, use the middle pmod socket for DS2.</li>
+</ul>
+<p>If you use USB controllers,</p>
+<ul>
+<li>Only the Sipeed-provided USB gamepads can be used with the on-board USB-A port. If it is not recognized, replug the pad.</li>
+<li>Other types of USB gamepads needs a USB hub to work. Please follow instructions on the <a href="../controllers/">controllers page</a>.</li>
 </ul>
 
 
