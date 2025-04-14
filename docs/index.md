@@ -14,12 +14,5 @@ TangCore is a comprehensive FPGA gaming distribution that brings classic gaming 
 - **SNESTang** - Super Nintendo Entertainment System
 - **GBATang** - Game Boy Advance
 - **MDTang** - Sega Genesis/Mega Drive
+- **SMSTang** - Sega Master System
 
-## Supported Hardware
-
-| Board Model | Status | Notes |
-|------------|--------|-------|
-| Tang Console 60K | ✅ Recommended | Best overall experience |
-| Tang Mega 60K | ✅ Fully supported | All cores available |
-| Tang Mega 138K | ✅ Fully supported | All cores available |
-| Tang Primer 25K | ⚠️ Limited | NES/SNES only | 
