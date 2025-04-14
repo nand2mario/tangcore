@@ -8,9 +8,10 @@
 * `src/iosys/textdisp.v`: 32x28 text mode display to show the overlay text
 * `src/iosys/uart_fixed.v`: the UART TX/RX modules
 
-The other older io system module is `iosys_picorv32.v`. It uses a risc-v softcore running inside the FPGA to act as the IO processor. New cores should use `iosys_bl616`, the newer module.
+The other older io system module is `iosys_picorv32.v`. It uses a risc-v softcore running inside the FPGA to act as the IO processor. New cores should use `iosys_bl616`.
 
 If you open `iosys_bl616.v`, you will see that it provides a few useful pins,
+
 * `overlay*`: these are signals for the "on-screen display" (OSD). It outputs a 256x224 image. When `overlay==1` (controlled by the MCU), it will be shown on screen. Note that `overlay*` run in the `hclk` (HDMI clock) domain, the rest of the signals run in `clk` domain.
 * `joy*`: inputs to iosys. These joypad button states will be sent periodically to MCU to control the overlay menu.
 * `rom_*`: When MCU starts ROM loading through the UART interface, data is output through these pins to the actual core.
