@@ -56,7 +56,7 @@ For detailed setup instructions, please refer to our [Installation Guide](https:
 4. Connect required peripherals (HDMI and controller)
 5. Power on and enjoy!
 
-## 🛠️ Development
+## 🛠️ Documentation
 
 TangCore uses a different architecture compared to individual cores (NESTang/SNESTang):
 - Firmware runs on BL616 MCU instead of FPGA
