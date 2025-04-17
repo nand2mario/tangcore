@@ -66,6 +66,10 @@ TangCore uses a different architecture compared to individual cores (NESTang/SNE
 
 For detailed development information, see an introduction to [TangCore archtecture](https://nand2mario.github.io/tangcore/dev-guide/architecture/), [building from sources](https://nand2mario.github.io/tangcore/dev-guide/building/), how to [develop a new core](https://nand2mario.github.io/tangcore/dev-guide/core-development/), and [core debugging guide](https://nand2mario.github.io/tangcore/dev-guide/core-debugging/).
 
+My blog post on TangCore,
+
+* [MCU for Better FPGA Gaming on Tang Console](https://nand2mario.github.io/posts/2025/mcu_for_better_fpga_gaming/)
+
 ## 📝 License
 
 TangCore firmware is licensed under Apache 2.0. Each core maintains its original license - please check individual core directories for details.
