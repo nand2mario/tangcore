@@ -25,12 +25,16 @@ if /i "%1"=="firmware" (
     call :do_smstang
 ) else if /i "%1"=="monitor" (
     call :do_monitor
+) else if /i "%1"=="pctang" (
+    call :do_pctang
 ) else if /i "%1"=="all" (
     call :do_firmware
     call :do_nestang
     call :do_snestang
     call :do_gbatang
     call :do_mdtang
+    call :do_smstang
+    call :do_pctang
 ) else if /i "%1"=="package" (
     call :do_package
 ) else (
@@ -113,6 +117,15 @@ if errorlevel 1 (
 cd %BUILD_ROOT%
 exit /b
 
+:do_pctang
+echo Building PCTang...
+cd pctang
+call buildall.bat
+if errorlevel 1 (
+    echo Error building PCTang
+    set /a ERROR_COUNT+=1
+)
+
 :do_monitor
 echo Building monitor...
 cd monitor
@@ -143,9 +156,6 @@ if errorlevel 1 (
 )
 
 echo Copy NESTang files
-copy /y "nestang\impl\pnr\nestang_primer25k_ds2.bin" "build\cores\primer25k\nestang.bin"
-copy /y "nestang\impl\pnr\nestang_mega60k_ds2.bin" "build\cores\mega60k\nestang.bin"
-copy /y "nestang\impl\pnr\nestang_mega138k_ds2.bin" "build\cores\mega138k\nestang.bin"
 copy /y "nestang\impl\pnr\nestang_console60k_ds2.bin" "build\cores\console60k\nestang.bin"
 copy /y "nestang\impl\pnr\nestang_console138k_ds2.bin" "build\cores\console138k\nestang.bin"
 if errorlevel 1 (
@@ -154,9 +164,6 @@ if errorlevel 1 (
 )
 
 echo Copy SNESTang files
-copy /y "snestang\impl\pnr\snestang_primer25k_ds2.bin" "build\cores\primer25k\snestang.bin"
-copy /y "snestang\impl\pnr\snestang_mega60k_ds2.bin" "build\cores\mega60k\snestang.bin"
-copy /y "snestang\impl\pnr\snestang_mega138k_ds2.bin" "build\cores\mega138k\snestang.bin"
 copy /y "snestang\impl\pnr\snestang_console60k_ds2.bin" "build\cores\console60k\snestang.bin"
 copy /y "snestang\impl\pnr\snestang_console138k_ds2.bin" "build\cores\console138k\snestang.bin"
 if errorlevel 1 (
@@ -165,8 +172,6 @@ if errorlevel 1 (
 )
 
 echo Copy GBATang files
-copy /y "gbatang\impl\pnr\gbatang_mega60k.bin" "build\cores\mega60k\gbatang.bin"
-copy /y "gbatang\impl\pnr\gbatang_mega138k.bin" "build\cores\mega138k\gbatang.bin"
 copy /y "gbatang\impl\pnr\gbatang_console60k.bin" "build\cores\console60k\gbatang.bin"
 copy /y "gbatang\impl\pnr\gbatang_console138k.bin" "build\cores\console138k\gbatang.bin"
 if errorlevel 1 (
@@ -175,8 +180,6 @@ if errorlevel 1 (
 )
 
 echo Copy MDTang files
-copy /y "mdtang\impl\pnr\mdtang_mega60k.bin" "build\cores\mega60k\mdtang.bin"
-copy /y "mdtang\impl\pnr\mdtang_mega138k.bin" "build\cores\mega138k\mdtang.bin"
 copy /y "mdtang\impl\pnr\mdtang_console60k.bin" "build\cores\console60k\mdtang.bin"
 copy /y "mdtang\impl\pnr\mdtang_console138k.bin" "build\cores\console138k\mdtang.bin"
 if errorlevel 1 (
@@ -192,10 +195,15 @@ if errorlevel 1 (
     set /a ERROR_COUNT+=1
 )
 
+echo Copy PCTang files
+copy /y "pctang\impl\pnr\pctang_console60k.bin" "build\cores\console60k\pctang.bin"
+copy /y "pctang\impl\pnr\pctang_console138k.bin" "build\cores\console138k\pctang.bin"
+if errorlevel 1 (
+    echo Warning: Some PCTang files could not be copied
+    set /a ERROR_COUNT+=1
+)
+
 echo Copy monitor files
-copy /y "monitor\impl\pnr\monitor_primer25k.bin" "build\cores\primer25k\monitor.bin"
-copy /y "monitor\impl\pnr\monitor_mega60k.bin" "build\cores\mega60k\monitor.bin"
-copy /y "monitor\impl\pnr\monitor_mega138k.bin" "build\cores\mega138k\monitor.bin"
 copy /y "monitor\impl\pnr\monitor_console60k.bin" "build\cores\console60k\monitor.bin"
 copy /y "monitor\impl\pnr\monitor_console138k.bin" "build\cores\console138k\monitor.bin"
 if errorlevel 1 (
