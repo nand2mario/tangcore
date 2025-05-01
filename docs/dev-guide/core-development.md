@@ -8,9 +8,10 @@
 * `src/iosys/textdisp.v`: 32x28 text mode display to show the overlay text
 * `src/iosys/uart_fixed.v`: the UART TX/RX modules
 
-The other older io system module is `iosys_picorv32.v`. It uses a risc-v softcore running inside the FPGA to act as the IO processor. New cores should use `iosys_bl616`, the newer module.
+The other older io system module is `iosys_picorv32.v`. It uses a risc-v softcore running inside the FPGA to act as the IO processor. New cores should use `iosys_bl616`.
 
 If you open `iosys_bl616.v`, you will see that it provides a few useful pins,
+
 * `overlay*`: these are signals for the "on-screen display" (OSD). It outputs a 256x224 image. When `overlay==1` (controlled by the MCU), it will be shown on screen. Note that `overlay*` run in the `hclk` (HDMI clock) domain, the rest of the signals run in `clk` domain.
 * `joy*`: inputs to iosys. These joypad button states will be sent periodically to MCU to control the overlay menu.
 * `rom_*`: When MCU starts ROM loading through the UART interface, data is output through these pins to the actual core.
@@ -23,14 +24,14 @@ Please [file an issue](https://github.com/nand2mario/tangcore/issues) if you met
 ## Generating core logo
 
 Whenever a core is loaded on the FPGA, its logo is displayed at the bottom of the overlay page. When you create
-a new core, you probably want to make a new logo too. There is a script to help with that.
+a new core, you probably want to make a new logo too. There is a script `tangcore/monitor/scripts/genlogo.py` to help with that. Read the script and make adjustments to the logo you want generate. Then,
 
 ```bash
 cd tangcore/monitor/scripts
 python genlogo.py
 ```
 
-This will print out something like this, that you can put in `iosys/gowin_dpb_menu.v` to change the logo.
+This will generate a preview of the logo and print out something like this, that you can put in `iosys/gowin_dpb_menu.v` to change the logo.
 
 ```
 defparam dpb_inst_0.INIT_RAM_1C = 256'hE0077CF80E00000000E00F78780E00000007FDFE7079FE00000007FCFC7031F8

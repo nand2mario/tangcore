@@ -41,9 +41,8 @@ TangCore is a comprehensive FPGA gaming distribution that brings classic gaming 
 | Board Model | Status | Notes |
 |------------|--------|-------|
 | [Tang Console 60K](https://sipeed.com/tangconsole) | ✅ Recommended | Best overall experience |
-| Tang Mega 60K | ✅ Fully supported | All cores available |
-| Tang Mega 138K | ✅ Fully supported | All cores available |
-| Tang Primer 25K | ⚠️ Limited | NES/SNES only |
+| Tang Console 138K | ✅ Experimental | Supported since April 2025 |
+| Tang Primer 25K | ✅ Experimental | NES/SNES only |
 
 <img src="doc/tangcore-boards.jpg" width=450> 
 
@@ -57,7 +56,7 @@ For detailed setup instructions, please refer to our [Installation Guide](https:
 4. Connect required peripherals (HDMI and controller)
 5. Power on and enjoy!
 
-## 🛠️ Development
+## 🛠️ Documentation
 
 TangCore uses a different architecture compared to individual cores (NESTang/SNESTang):
 - Firmware runs on BL616 MCU instead of FPGA
@@ -66,6 +65,10 @@ TangCore uses a different architecture compared to individual cores (NESTang/SNE
 - SOM-connector debugging interface
 
 For detailed development information, see an introduction to [TangCore archtecture](https://nand2mario.github.io/tangcore/dev-guide/architecture/), [building from sources](https://nand2mario.github.io/tangcore/dev-guide/building/), how to [develop a new core](https://nand2mario.github.io/tangcore/dev-guide/core-development/), and [core debugging guide](https://nand2mario.github.io/tangcore/dev-guide/core-debugging/).
+
+My blog post on TangCore,
+
+* [MCU for Better FPGA Gaming on Tang Console](https://nand2mario.github.io/posts/2025/mcu_for_better_fpga_gaming/)
 
 ## 📝 License
 

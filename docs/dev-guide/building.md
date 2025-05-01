@@ -5,8 +5,8 @@ Here's how to build the TangCore distribution, including the firmware, the monit
 ## Setting up the environment
 
 * Windows 10 or 11
-* Install Gowin IDE 1.9.10.3 (used by all cores) and 1.9.11 (for GBATang). 
-* Install git for windows.
+* Install Gowin IDE 1.9.10.3 and 1.9.11. Both are needed for the building process.
+* Install [git for windows](https://git-scm.com/downloads/win).
 * Checkout tangcore and BL616 SDK/toolchain.
 ```batch
 mkdir \Gowin\dev
@@ -27,7 +27,7 @@ cd tangcore\firmware-bl616
 
 buildall         # build for all boards
 
-set TANG_BOARD=mega60k
+set TANG_BOARD=primer25k
 make             # build for one board
 ```
 
