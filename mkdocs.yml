@@ -71,6 +71,8 @@ nav:
   - User Guide:
     - Installation: user-guide/installation.md
     - Controllers: user-guide/controllers.md
+    - GBA: user-guide/gba.md
+    - PC/XT: user-guide/pcxt.md
     - Troubleshooting: user-guide/troubleshooting.md
   - Developer Guide:
     - Architecture: dev-guide/architecture.md
