@@ -5,17 +5,18 @@
 | Board Model       | FPGA Capacity | Compatible Cores             | Status        |
 |-------------------|---------------|------------------------------|---------------|
 | Tang Console 60K  | 60K LUT       | All cores                    | ✔️ Great     |
-| Tang Console 138K | 138K LUT      | All cores                    | ✔️ Experimental |
+| Tang Console 138K | 138K LUT      | All cores                    | ✔️ Great     |
 | Tang Primer 25K   | 25K LUT       | NESTang, SNESTang            | ✔️ Experimental (v0.7) |
-| Tang Nano 20K     | 20K LUT       | *Unsupported*                | ❌ Use standalone NESTang/SNESTang   |
+NESTang/SNESTang   |
 
 ---
 
 ## 📦 Pre-Install Checklist
 - [ ] Bouffalo Flash Cube v1.1 (in `tools/bflb_tools/bouffalo_flash_cube` of [Bouffalo SDK](https://github.com/bouffalolab/bouffalo_sdk), also a [local standalone version here](https://nand2mario.github.io/tangcore/user-guide/assets/bouffalo_flash_cube-1.1.zip))
-- [ ] USB 2.0 drive (FAT32/exFAT, ≤32GB recommended)
+- [ ] MicroSD card or USB 2.0 drive (FAT32/exFAT, ≤32GB recommended)
 - [ ] USB-C OTG adapter with **power pass-through**
 - [ ] Valid GBA BIOS (`gba_bios.bin`)
+- [ ] Valid PC/XT BIOS (`bios.bin`)
 - [ ] Latest [TangCore Release Package](https://github.com/nand2mario/tangcore/releases)
 
 ---
@@ -47,7 +48,7 @@
 
 ## 🕹️ Game System Setup
 
-### USB drive content
+### SD/USB drive content
 ```bash
 📁 /                
 ├── 📁 cores/        # `cores` directory from release
@@ -58,7 +59,9 @@
 ├── 📁 gba/
 │    └── 🗎 gba_bios.bin  # GBA BIOS
 ├── 📁 genesis/      # .bin/.md files
-└── 📁 sms/          # .sms files
+├── 📁 sms/          # .sms files
+└── 📁 pc/           # .img floppy images
+│    └── 🗎 bios.bin  # PC 5160 BIOS
 ```
 
 ### Hardware Assembly
