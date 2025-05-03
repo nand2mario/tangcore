@@ -432,6 +432,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    PC/XT
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -443,6 +456,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bios" class="md-nav__link">
+    <span class="md-ellipsis">
+      BIOS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keyboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keyboard
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-floppy-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using floppy images
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -651,6 +710,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bios" class="md-nav__link">
+    <span class="md-ellipsis">
+      BIOS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keyboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keyboard
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-floppy-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using floppy images
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -669,8 +763,15 @@
 
 
 <h1 id="ibm-pcxt-core">IBM PC/XT core<a class="headerlink" href="#ibm-pcxt-core" title="Permanent link">&para;</a></h1>
+<h2 id="bios">BIOS<a class="headerlink" href="#bios" title="Permanent link">&para;</a></h2>
 <p>The PC/XT core requires a BIOS to run. It should be located at <code>/pc/bios.bin</code> and 64KB in size. It is in the same format as the PCXT_MiSTer ROMs. You can look for PCXT_MiSTer ROM files.</p>
 <p>A python script is also provided to assemble your own BIOS image. Run <code>python scripts/bios_make.py</code> and it should output the necessary <code>bios.bin</code>. An additional benefit of the script is you can choose to patch the original BIOS to skip the time-consuming memory check of the original BIOS, which makes loading much faster.</p>
+<h2 id="keyboard">Keyboard<a class="headerlink" href="#keyboard" title="Permanent link">&para;</a></h2>
+<p>As of TangCore 0.9, USB keyboard connected through the BL616 MCU is supported for the PC/XT. So you need to connect the USB keyboard with a USB hub. The onboard USB-A port is not supported yet.</p>
+<p>In the PC/XT core, press <strong>F12</strong> to switch the OSD on and off.</p>
+<h2 id="using-floppy-images">Using floppy images<a class="headerlink" href="#using-floppy-images" title="Permanent link">&para;</a></h2>
+<p>Press <strong>F12</strong> to call out the OSD menu. Here you can load floppy images or reset the machine.</p>
+<p><img alt="" src="../pcxt_osd.jpg" /></p>
 
 
 

@@ -441,9 +441,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#usb-drive-content" class="md-nav__link">
+  <a href="#sdusb-drive-content" class="md-nav__link">
     <span class="md-ellipsis">
-      USB drive content
+      SD/USB drive content
     </span>
   </a>
   
@@ -787,9 +787,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#usb-drive-content" class="md-nav__link">
+  <a href="#sdusb-drive-content" class="md-nav__link">
     <span class="md-ellipsis">
-      USB drive content
+      SD/USB drive content
     </span>
   </a>
   
@@ -850,7 +850,7 @@
 <td>Tang Console 138K</td>
 <td>138K LUT</td>
 <td>All cores</td>
-<td>✔️ Experimental</td>
+<td>✔️ Great</td>
 </tr>
 <tr>
 <td>Tang Primer 25K</td>
@@ -859,10 +859,10 @@
 <td>✔️ Experimental (v0.7)</td>
 </tr>
 <tr>
-<td>Tang Nano 20K</td>
-<td>20K LUT</td>
-<td><em>Unsupported</em></td>
-<td>❌ Use standalone NESTang/SNESTang</td>
+<td>NESTang/SNESTang</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -870,9 +870,10 @@
 <h2 id="pre-install-checklist">📦 Pre-Install Checklist<a class="headerlink" href="#pre-install-checklist" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Bouffalo Flash Cube v1.1 (in <code>tools/bflb_tools/bouffalo_flash_cube</code> of <a href="https://github.com/bouffalolab/bouffalo_sdk">Bouffalo SDK</a>, also a <a href="https://nand2mario.github.io/tangcore/user-guide/assets/bouffalo_flash_cube-1.1.zip">local standalone version here</a>)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> USB 2.0 drive (FAT32/exFAT, ≤32GB recommended)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> MicroSD card or USB 2.0 drive (FAT32/exFAT, ≤32GB recommended)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> USB-C OTG adapter with <strong>power pass-through</strong></li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Valid GBA BIOS (<code>gba_bios.bin</code>)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Valid PC/XT BIOS (<code>bios.bin</code>)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Latest <a href="https://github.com/nand2mario/tangcore/releases">TangCore Release Package</a></li>
 </ul>
 <hr />
@@ -905,7 +906,7 @@
 <em>Green status indicates successful programming</em></p>
 <hr />
 <h2 id="game-system-setup">🕹️ Game System Setup<a class="headerlink" href="#game-system-setup" title="Permanent link">&para;</a></h2>
-<h3 id="usb-drive-content">USB drive content<a class="headerlink" href="#usb-drive-content" title="Permanent link">&para;</a></h3>
+<h3 id="sdusb-drive-content">SD/USB drive content<a class="headerlink" href="#sdusb-drive-content" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>📁<span class="w"> </span>/<span class="w">                </span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>├──<span class="w"> </span>📁<span class="w"> </span>cores/<span class="w">        </span><span class="c1"># `cores` directory from release</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>│<span class="w">    </span>├──<span class="w"> </span>📁<span class="w"> </span>console60k/
@@ -915,7 +916,9 @@
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>├──<span class="w"> </span>📁<span class="w"> </span>gba/
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>│<span class="w">    </span>└──<span class="w"> </span>🗎<span class="w"> </span>gba_bios.bin<span class="w">  </span><span class="c1"># GBA BIOS</span>
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>├──<span class="w"> </span>📁<span class="w"> </span>genesis/<span class="w">      </span><span class="c1"># .bin/.md files</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>└──<span class="w"> </span>📁<span class="w"> </span>sms/<span class="w">          </span><span class="c1"># .sms files</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>├──<span class="w"> </span>📁<span class="w"> </span>sms/<span class="w">          </span><span class="c1"># .sms files</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>└──<span class="w"> </span>📁<span class="w"> </span>pc/<span class="w">           </span><span class="c1"># .img floppy images</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>│<span class="w">    </span>└──<span class="w"> </span>🗎<span class="w"> </span>bios.bin<span class="w">  </span><span class="c1"># PC 5160 BIOS</span>
 </span></code></pre></div>
 <h3 id="hardware-assembly">Hardware Assembly<a class="headerlink" href="#hardware-assembly" title="Permanent link">&para;</a></h3>
 <ol>
