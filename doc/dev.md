@@ -22,7 +22,7 @@ Here's a picture of the TangCore development setup:
 
 <img src="tangcores-dev-setup.jpg" width="500"/>
 
-The end user does not need the SOM connector for debugging. Otherwise the seutp is the same as the developement setup.
+The end user does not need the SOM connector for debugging. Otherwise the setup is the same as the developement setup.
 
 Debug connection:
 * We use the Sipeed RV-debugger dongle to connect the FPGA to PC.
