@@ -38,6 +38,8 @@ Please [file an issue](https://github.com/nand2mario/tangcore/issues) if you run
 
 - **[SMSTang](https://github.com/nand2mario/smstang/)** - Sega Master System
 
+- 🌟🌟 **Try the new [486Tang](https://github.com/nand2mario/486tang)**
+
 ## 💻 Supported Hardware
 
 | Board Model | Status | Notes |
