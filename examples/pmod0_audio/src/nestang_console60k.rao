@@ -1,0 +1,28 @@
+<?xml version="1" encoding="UTF-8"?>
+<GAO_CONFIG>
+    <Version>3.0</Version>
+    <Mode>Lite</Mode>
+    <AoCore_Lite index="0" sample_clock="sys_clk" trig_type="0" capture_amount="1024" implemention="0" input_register_enabled="1" capture_init_data_enabled="1" module_name="top">
+        <SignalList>
+            <Signal capture_enable="true">sys_clk</Signal>
+            <Bus capture_enable="true" name="o_pmod0[7:0]">
+                <Signal>o_pmod0[1]</Signal>
+                <Signal>o_pmod0[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="o_val[7:0]">
+                <Signal>o_val[7]</Signal>
+                <Signal>o_val[6]</Signal>
+                <Signal>o_val[5]</Signal>
+                <Signal>o_val[4]</Signal>
+                <Signal>o_val[3]</Signal>
+                <Signal>o_val[2]</Signal>
+                <Signal>o_val[1]</Signal>
+                <Signal>o_val[0]</Signal>
+            </Bus>
+            <Signal capture_enable="true">s0</Signal>
+            <Signal capture_enable="true">s1</Signal>
+            <Signal capture_enable="true">s2</Signal>
+        </SignalList>
+    </AoCore_Lite>
+    <GAO_ID>1101010000011000</GAO_ID>
+</GAO_CONFIG>
