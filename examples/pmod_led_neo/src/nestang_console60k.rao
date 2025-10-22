@@ -1,0 +1,47 @@
+<?xml version="1" encoding="UTF-8"?>
+<GAO_CONFIG>
+    <Version>3.0</Version>
+    <Mode>Lite</Mode>
+    <AoCore_Lite index="0" sample_clock="sys_clk" trig_type="0" capture_amount="16384" implemention="0" input_register_enabled="1" capture_init_data_enabled="1" module_name="top">
+        <SignalList>
+            <Signal capture_enable="true">sys_clk</Signal>
+            <Bus capture_enable="true" name="counter[26:0]">
+                <Signal>counter[26]</Signal>
+                <Signal>counter[25]</Signal>
+                <Signal>counter[24]</Signal>
+                <Signal>counter[23]</Signal>
+                <Signal>counter[22]</Signal>
+                <Signal>counter[21]</Signal>
+                <Signal>counter[20]</Signal>
+                <Signal>counter[19]</Signal>
+                <Signal>counter[18]</Signal>
+                <Signal>counter[17]</Signal>
+                <Signal>counter[16]</Signal>
+                <Signal>counter[15]</Signal>
+                <Signal>counter[14]</Signal>
+                <Signal>counter[13]</Signal>
+                <Signal>counter[12]</Signal>
+                <Signal>counter[11]</Signal>
+                <Signal>counter[10]</Signal>
+                <Signal>counter[9]</Signal>
+                <Signal>counter[8]</Signal>
+                <Signal>counter[7]</Signal>
+                <Signal>counter[6]</Signal>
+                <Signal>counter[5]</Signal>
+                <Signal>counter[4]</Signal>
+                <Signal>counter[3]</Signal>
+                <Signal>counter[2]</Signal>
+                <Signal>counter[1]</Signal>
+                <Signal>counter[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="led[7:0]">
+                <Signal>led[0]</Signal>
+            </Bus>
+            <Signal capture_enable="true">led_reg</Signal>
+            <Signal capture_enable="true">s0</Signal>
+            <Signal capture_enable="true">s1</Signal>
+            <Signal capture_enable="true">s2</Signal>
+        </SignalList>
+    </AoCore_Lite>
+    <GAO_ID>1000010001100110</GAO_ID>
+</GAO_CONFIG>
